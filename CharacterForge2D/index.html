@@ -4,26 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="TemplateData/manifest.json" />
     <title>CharacterForge2D</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="icon" type="image/x-icon" href="TemplateData/favicon.ico">
   </head>
   <body class="dark">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
-    </div>
     <script>
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/CharacterForge2D.loader.js";
       const config = {
-        dataUrl: buildUrl + "/1ec1f4d74c8f666eb355b1cc7cc3afa8.data.unityweb",
+        dataUrl: buildUrl + "/ab3d644247a40db9eb101be861aae318.data.unityweb",
         frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb",
         codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "malivvan",
         productName: "CharacterForge2D",
-        productVersion: "0.1",
+        productVersion: "0.1"
       };
 
       const container = document.querySelector("#unity-container");
