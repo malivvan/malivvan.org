@@ -22,7 +22,6 @@ body {
     height: 100%;
     background: #231F20;
 }
-
 #unity-loading-bar {
     flex: 1 1 auto;
     display: flex;
@@ -36,5 +35,3 @@ body {
 #unity-logo img {
     max-width: 80%;
 }
-
-
