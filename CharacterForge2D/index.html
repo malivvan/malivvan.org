@@ -14,7 +14,7 @@
     <script>
     UpUp.start({
       'content-url': 'index.html',
-      'cache-version': "0.1",
+      'cache-version': "0.2",
       'service-worker-url': 'upup.sw.min.js',
       'assets': [
         'StreamingAssets/UnityServicesProjectConfiguration.json',
@@ -24,9 +24,9 @@
         'TemplateData/style.css',
         'TemplateData/manifest.json',
         'Build/CharacterForge2D.loader.js',
-        'Build/d6029a9593baa3261c7937d396ae7d5d.data.unityweb',
-        'Build/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb',
-        'Build/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb'
+        'Build/4325bf6463d037bfb706d1a37e977f29.data.br',
+        'Build/2c753b8f4c731b0ff9c12b8b3599b27e.js.br',
+        'Build/1c4bbe882b6239c702dd63bfe01e03fd.wasm.br'
       ]
     });
     </script>
@@ -39,13 +39,13 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/CharacterForge2D.loader.js";
       const config = {
-        dataUrl: buildUrl + "/d6029a9593baa3261c7937d396ae7d5d.data.unityweb",
-        frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb",
-        codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb",
+        dataUrl: buildUrl + "/4325bf6463d037bfb706d1a37e977f29.data.br",
+        frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.br",
+        codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "malivvan",
         productName: "CharacterForge2D",
-        productVersion: "0.1"
+        productVersion: "0.2"
       };
 
       const container = document.querySelector("#unity-container");
@@ -60,7 +60,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {}).then((unityInstance) => {
-          console.log("malivvan CharacterForge2D 0.1");
+          console.log("malivvan CharacterForge2D 0.2");
         }).catch((message) => {
           alert(message);
         });
