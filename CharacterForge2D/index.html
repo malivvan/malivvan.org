@@ -14,7 +14,7 @@
     <script>
     UpUp.start({
       'content-url': 'index.html',
-      'cache-version': "0.2",
+      'cache-version': "0.3",
       'service-worker-url': 'upup.sw.min.js',
       'assets': [
         'StreamingAssets/UnityServicesProjectConfiguration.json',
@@ -24,9 +24,9 @@
         'TemplateData/style.css',
         'TemplateData/manifest.json',
         'Build/CharacterForge2D.loader.js',
-        'Build/4325bf6463d037bfb706d1a37e977f29.data.br',
-        'Build/2c753b8f4c731b0ff9c12b8b3599b27e.js.br',
-        'Build/1c4bbe882b6239c702dd63bfe01e03fd.wasm.br'
+        'Build/CharacterForge2D.data.unityweb',
+        'Build/CharacterForge2D.framework.js.unityweb',
+        'Build/CharacterForge2D.wasm.unityweb'
       ]
     });
     </script>
@@ -39,13 +39,13 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/CharacterForge2D.loader.js";
       const config = {
-        dataUrl: buildUrl + "/4325bf6463d037bfb706d1a37e977f29.data.br",
-        frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.br",
-        codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.br",
+        dataUrl: buildUrl + "/CharacterForge2D.data.unityweb",
+        frameworkUrl: buildUrl + "/CharacterForge2D.framework.js.unityweb",
+        codeUrl: buildUrl + "/CharacterForge2D.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "malivvan",
         productName: "CharacterForge2D",
-        productVersion: "0.2"
+        productVersion: "0.3"
       };
 
       const container = document.querySelector("#unity-container");
@@ -60,7 +60,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {}).then((unityInstance) => {
-          console.log("malivvan CharacterForge2D 0.2");
+          console.log("malivvan CharacterForge2D 0.3");
         }).catch((message) => {
           alert(message);
         });
