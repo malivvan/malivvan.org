@@ -1,0 +1,9 @@
+{
+    "name": "CharacterForge2D",
+    "short_name": "CharacterForge2D",
+    "background_color": "#000000",
+    "display": "standalone",
+    "orientation": "landscape",
+    "scope": "https://malivvan.org/CharacterForge2D/",
+    "start_url": "https://malivvan.org/CharacterForge2D/"
+  }
