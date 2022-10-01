@@ -1,6 +1,8 @@
 {
     "name": "CharacterForge2D",
-    "short_name": "CharacterForge2D",
+    "short_name": "CF2D",
+    "description": "A character generator for 2D games and Pen & Paper RPGs",
+    "theme_color": "#80DEEA",
     "background_color": "#000000",
     "display": "standalone",
     "orientation": "landscape",
@@ -11,3 +13,4 @@
 	    {"src":"TemplateData/android-chrome-512x512.png", "sizes":"512x512","type":"image/png"}]
   }
   
+ 
