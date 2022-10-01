@@ -10,8 +10,29 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <title>CharacterForge2D</title>
     <link rel="manifest" href="TemplateData/manifest.json" />
+    <script src="TemplateData/upup.min.js"></script>
+    <script>
+    UpUp.start({
+      'cache-version': "0.1",
+      'content-url': 'TemplateData/offline.html',
+      'service-worker-url': 'TemplateData/upup.sw.min.js',
+      'assets': [
+        'StreamingAssets/UnityServicesProjectConfiguration.json',
+        'TemplateData/apple-touch-icon.png',
+        'TemplateData/favicon-32x32.png',
+        'TemplateData/favicon-16x16.png',        
+        'TemplateData/style.css',
+        'TemplateData/manifest.json',
+        'TemplateData/offline.html',
+        'Build/CharacterForge2D.loader.js',
+        'Build/8d3d782f28e83b888606dad68dfac5f7.data.unityweb',
+        'Build/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb',
+        'Build/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb'
+      ]
+    });
+    </script>
   </head>
-  <body class="dark">
+  <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
@@ -19,7 +40,7 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/CharacterForge2D.loader.js";
       const config = {
-        dataUrl: buildUrl + "/24f4445e967eaab54ed6ddb45f6e579a.data.unityweb",
+        dataUrl: buildUrl + "/8d3d782f28e83b888606dad68dfac5f7.data.unityweb",
         frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb",
         codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
@@ -39,13 +60,13 @@
       const script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {}).catch((message) => {
+        createUnityInstance(canvas, config, (progress) => {}).then((unityInstance) => {
+          console.log("malivvan CharacterForge2D 0.1");
+        }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
-
-      console.log("com.malivvan.toLowerCase().CharacterForge2D.toLowerCase() v0.1")
     </script>
   </body>
 </html>
