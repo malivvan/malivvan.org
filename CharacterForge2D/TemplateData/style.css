@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    background: #231F20;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -20,7 +21,6 @@ body {
 #unity-canvas {
     width: 100%;
     height: 100%;
-    background: #231F20;
 }
 #unity-loading-bar {
     flex: 1 1 auto;
