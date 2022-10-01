@@ -16,7 +16,7 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/CharacterForge2D.loader.js";
       const config = {
-        dataUrl: buildUrl + "/ab3d644247a40db9eb101be861aae318.data.unityweb",
+        dataUrl: buildUrl + "/83aa7faf13f277deeeb32d267fd95f70.data.unityweb",
         frameworkUrl: buildUrl + "/2c753b8f4c731b0ff9c12b8b3599b27e.js.unityweb",
         codeUrl: buildUrl + "/1c4bbe882b6239c702dd63bfe01e03fd.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
@@ -27,8 +27,6 @@
 
       const container = document.querySelector("#unity-container");
       const canvas = document.querySelector("#unity-canvas");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
@@ -38,14 +36,13 @@
       const script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarEmpty.style.display = "";
-          progressBarFull.style.width = `${100 * progress}%`;
-        }).catch((message) => {
+        createUnityInstance(canvas, config, (progress) => {}).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
+
+      console.log("com.malivvan.toLowerCase().CharacterForge2D.toLowerCase() v0.1")
     </script>
   </body>
 </html>
